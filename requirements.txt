@@ -1,0 +1,7 @@
+openai-whisper
+torch
+soundfile
+numpy
+pydub
+coqui-tts
+faster-whisper
