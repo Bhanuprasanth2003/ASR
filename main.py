@@ -4,7 +4,7 @@ from speech_tts.synthesizer import synthesize
 from asterisk.audio_stream import record_call
 import subprocess
 
-CALL_RECORDING = "/tmp/call_audio"
+CALL_RECORDING = "/tmp/call_audio.wav"
 TTS_REPLY = "/tmp/reply.wav"
 
 def run_pipeline():
@@ -12,7 +12,7 @@ def run_pipeline():
     record_call(CALL_RECORDING)
 
     print("Transcribing...")
-    user_text = transcribe(CALL_RECORDING + ".wav")
+    user_text = transcribe(CALL_RECORDING )
     print("User said:", user_text)
 
     response = get_response(user_text)
